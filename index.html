@@ -15,13 +15,19 @@
       theme: {
         extend: {
           keyframes: {
-            curtain: {
+            'curtain-top': {
               '0%': { transform: 'scaleY(1)' },
               '100%': { transform: 'scaleY(0)' },
+            },
+            'slide-x': {
+              '0%': { transform: 'scaleX(0)', marginLeft: 0, opacity: 1 },
+              '50%': { transform: 'scaleX(1)', marginLeft: 0, opacity: 1 },
+              '100%': { transform: 'scaleY(0)', marginLeft: '100px', opacity: 1 },
             }
           },
           animation: {
-            'curtain-ease': 'curtain 0.6s cubic-bezier(.70,0,.35,1) forwards',
+            'curtain-top': 'curtain-top 0.6s cubic-bezier(.70,0,.35,1) 3s forwards',
+            'slide-x': 'slide-x 1s cubic-bezier(.70,0,.35,1) infinite',
           }
         }
       }
@@ -29,17 +35,90 @@
   </script>
 </head>
 <body class="padding-0 margin-0 flex flex-1 h-screen justify-center" style="background-color: #DFDFDF;">
-  <div class="absolute w-screen h-screen bg-[#1446E7] z-50 transition-all animate-curtain-ease origin-top"></div>
+  <div class="absolute flex flex-col items-center justify-center w-screen h-screen bg-[#1446E7] z-50 transition-all animate-curtain-top origin-top">
+    <img class="mx-auto top-[50vh] mb-2" src="assets/matmac-light.svg" alt="Matmac Portfolio">
+    <div class="w-[100px] overflow-hidden">
+      <div class="h-[1px] bg-white w-[100px] transition-all animate-slide-x origin-left"></div>
+    </div>
+  </div>
   <header class="absolute h-[100px] flex items-center flex-row px-12 justify-between w-screen z-10">
     <a href="./"><img src="./assets/logo-matmac.svg" alt="Matmac - Design Manager"></a>
     <div>
-      <a class="text-[#39474E] text-base no-underline font-regular border-b hover:border-[#1446E7] hover:text-[#1446E7]" href="/projects" style="font-family: Inter, sans-serif;">Projects</a>
-      <a class="text-[#39474E] text-base no-underline font-regular mx-6 border-b hover:border-[#1446E7] hover:text-[#1446E7]" href="/about" style="font-family: Inter, sans-serif;">About</a>
+      <a class="text-[#39474E] text-base no-underline font-regular border-b hover:border-[#1446E7] hover:text-[#1446E7]" href="./projects" style="font-family: Inter, sans-serif;">Projects</a>
+      <a class="text-[#39474E] text-base no-underline font-regular mx-6 border-b hover:border-[#1446E7] hover:text-[#1446E7]" href="./about" style="font-family: Inter, sans-serif;">About</a>
       <a class="text-[#39474E] text-base no-underline font-regular border-b hover:border-[#1446E7] hover:text-[#1446E7]" href="mailto:hello@matmac.design" style="font-family: Inter, sans-serif;">Contact</a>
     </div>
   </header>
   <section class="flex flex-1 items-center justify-center flex-col">
     <div class="relative">
+      <div class="absolute inset-2/4 -ml-[3.125rem] -mt-[55px] z-[40] w-[100px] h-[50px]">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://web.resource.org/cc/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+          version="1.1"
+          baseProfile="full"
+          width="100px"
+          height="50px"
+          viewBox="1 140 470 50"
+          preserveAspectRatio="xMidYMid meet"
+          id="svg_document"
+          style="zoom: 1;">
+        <g id="main_group">
+        <path
+          stroke="#292E31"
+          stroke-linejoin="round"
+          id="path1"
+          stroke-width="15.75px"
+          d="M23,213 C54.5,213 165.800003,98.900002 118.199997,98.200005 C70.599998,97.5 75.5,238.899994 75.5,238.899994 C75.5,238.899994 77.599998,172.399994 116.099998,172.399994 C154.599991,172.399994 109.799995,237.5 143.399994,239.600006 C177,241.699997 225.300003,175.899994 190.300003,174.5 C155.300003,173.100006 156,236.100006 202.899994,238.199997 C249.800003,240.300003 303.699982,105.900002 262.399994,103.099998 C221.099991,100.300003 228.800003,234.699997 270.799988,237.5 C312.799988,240.300003 373.699982,104.5 331,102.400002 C288.299988,100.300003 293.199982,236.800003 337.299988,237.5 C365.299988,236.100006 356.199982,171.699997 392.600006,173.100006 C412.899994,174.5 421.299988,189.899994 420.600006,189.199997 C419.899994,188.5 426.899994,236.800003 389.799988,236.800003 C352.699982,236.800003 356.899994,171.699997 392.600006,173.100006 C424.799988,175.899994 420.600006,203.899994 421.299988,196.199997 C421.299988,196.899994 444.399994,189.199997 447.899994,173.800003"
+          fill="none"
+          stroke-linecap="round"
+          transform="">
+        <animate
+          dur="2"
+          begin="0"
+          end="4s"
+          from="0"
+          values="0,1739;1739,0;"
+          id="hello1"
+          repeatCount="0"
+          fill="freeze"
+          attributeName="stroke-dasharray"
+          attributeType="XML">
+        </animate>
+        </path>
+        <circle
+          stroke="#292E31"
+          id="circle1"
+          stroke-width="3px"
+          cy="231.5px"
+          fill="#292E31"
+          r="10.5px"
+          cx="450.5px"
+          transform="">
+        <set dur="2.25s"
+          begin="hello1.begin"
+          id="set1"
+          repeatCount="0"
+          attributeName="r"
+          from="0"
+          to="1"
+          attributeType="XML">
+        </set>
+        <animate
+          additive="replace"
+          dur="0.25s"
+          begin="hello1.end"
+          id="animate1"
+          from="0"
+          values="0;10.5;"
+          accumulate="none"
+          repeatCount="0"
+          fill="freeze"
+          attributeName="r"
+          attributeType="XML">
+        </animate>
+        </circle>
+        </g>
+        </svg>
+      </div>
       <img class="absolute right-0 top-0 z-20 animate-[spin_10s_linear_infinite]" src="assets/available.svg" />
       <img class="relative z-10 mt-10" src="assets/matmacintosh.png" width="300" height="300" alt="Matmac Portfolio"/>
     </div>
