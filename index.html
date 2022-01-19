@@ -23,33 +23,38 @@
               '0%': { transform: 'scaleX(0)', marginLeft: 0, opacity: 1 },
               '50%': { transform: 'scaleX(1)', marginLeft: 0, opacity: 1 },
               '100%': { transform: 'scaleY(0)', marginLeft: '100px', opacity: 1 },
-            }
+            },
+            'spin-reverse': {
+              'from': { transform: 'rotate(0deg)' },
+              'to': { transform: 'rotate(360deg)' },
+            },
           },
           animation: {
             'curtain-top': 'curtain-top 0.6s cubic-bezier(.70,0,.35,1) 3s forwards',
             'slide-x': 'slide-x 1s cubic-bezier(.70,0,.35,1) infinite',
+            'spin-reverse': 'spin-reverse 10s linear infinite reverse'
           }
         }
       }
     }
   </script>
 </head>
-<body class="padding-0 margin-0 flex flex-1 h-screen justify-center" style="background-color: #DFDFDF;">
+<body class="flex justify-center flex-1 h-screen padding-0 margin-0" style="background-color: #DFDFDF;">
   <div class="absolute flex flex-col items-center justify-center w-screen h-screen bg-[#1446E7] z-50 transition-all animate-curtain-top origin-top">
-    <img class="mx-auto top-[50vh] mb-2" src="assets/matmac-light.svg" alt="Matmac Portfolio">
+    <img class="mx-auto top-[50vh] mb-2" src="assets/matmac-light.svg" width="101" height="17" alt="Matmac Portfolio">
     <div class="w-[100px] overflow-hidden">
       <div class="h-[1px] bg-white w-[100px] transition-all animate-slide-x origin-left"></div>
     </div>
   </div>
   <header class="absolute h-[100px] flex items-center flex-row px-12 justify-between w-screen z-10">
-    <a href="/"><img src="./assets/logo-matmac.svg" alt="Matmac - Design Manager"></a>
+    <h1><a href="/"><img src="./assets/logo-matmac.svg" width="100" height="25" alt="Matmac - Design Manager"></a></h1>
     <div>
       <a class="text-[#39474E] text-base no-underline font-regular hover:border-b hover:border-[#1446E7] hover:text-[#1446E7]" href="./projects" style="font-family: Inter, sans-serif;">Projects</a>
       <a class="text-[#39474E] text-base no-underline font-regular mx-6 hover:border-b hover:border-[#1446E7] hover:text-[#1446E7]" href="./about" style="font-family: Inter, sans-serif;">About</a>
       <a class="text-[#39474E] text-base no-underline font-regular hover:border-b hover:border-[#1446E7] hover:text-[#1446E7]" href="mailto:hello@matmac.design" style="font-family: Inter, sans-serif;">Contact</a>
     </div>
   </header>
-  <section class="flex flex-1 items-center justify-center flex-col">
+  <section class="flex flex-col items-center justify-center flex-1">
     <div class="relative">
       <div class="absolute inset-2/4 -ml-[3.125rem] -mt-[55px] z-[40] w-[100px] h-[50px]">
         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://web.resource.org/cc/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -119,11 +124,11 @@
         </g>
         </svg>
       </div>
-      <img class="absolute right-0 top-0 z-20 animate-[spin_10s_linear_infinite]" src="assets/available.svg" alt="Matmac - Available for freelance and contract work" />
+      <img class="absolute top-0 right-0 z-20 animate-spin-reverse" src="assets/available.svg" alt="Matmac - Available for freelance and contract work" />
       <img class="relative z-10 mt-10" src="assets/matmacintosh.png" width="300" height="300" alt="Matmac Portfolio"/>
     </div>
-    <p class="max-w-[50vw] text-center mt-[-45px] leading-none tracking-tight text-[#39474E] font-semibold" style="font-family: Inter, sans-serif; font-size: 70px;">I'm Matias Bejas, Design Lead & UX/UI Expert</p>
-    <p class="max-w-[50vw] text-center mt-8 leading-none text-[#8A9AA3] text-[20px] font-regular" style="font-family: Inter, sans-serif;">I help industry leaders & startups create remarkable user-driven experiences</p>
+    <h2 class="max-w-[50vw] text-center mt-[-45px] leading-none tracking-tight text-[#39474E] font-semibold" style="font-family: Inter, sans-serif; font-size: 70px;">I'm Matias Bejas, Design Lead & UX/UI Expert</h2>
+    <h3 class="max-w-[50vw] text-center mt-8 leading-none text-[#8A9AA3] text-[20px] font-regular" style="font-family: Inter, sans-serif;">I help industry leaders & startups create remarkable user-driven experiences</h3>
   </section>
   <footer class="absolute bottom-0 w-screen mb-8 px-12 text-[#39474e] text-base flex flex-row justify-between" style="font-family: Inter, sans-serif;">
     <div>
