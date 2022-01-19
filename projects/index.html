@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
   <link rel="shortcut icon" href="../favicon.png" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,10 +19,10 @@
       -ms-overflow-style: none;
       scrollbar-width: none;
     }
-</style>
+  </style>
 </head>
-<body class="flex justify-center flex-1 h-screen p-0 m-0" style="background-color: #DFDFDF;">
-  <header class="fixed h-[100px] flex items-center flex-row px-12 justify-between w-screen z-10">
+<body class="flex justify-center flex-1 p-0 m-0 overflow-hidden md:h-screen" style="background-color: #DFDFDF;">
+  <header class="fixed top-0 h-[100px] flex items-center flex-row px-12 justify-between w-screen z-10">
     <a href="/"><img src="../assets/logo-matmac.svg" alt="Matmac - Design Manager"></a>
     <nav role="navigation">
       <a class="text-base no-underline font-regular border-b border-[#1446E7] text-[#1446E7]" href="/projects" style="font-family: Inter, sans-serif;">Projects</a>
@@ -30,7 +30,7 @@
       <a class="text-[#39474E] text-base no-underline font-regular hover:border-b hover:border-[#1446E7] hover:text-[#1446E7]" href="mailto:hello@matmac.design" style="font-family: Inter, sans-serif;">Contact</a>
     </nav>
   </header>
-  <section class="flex flex-col items-center justify-center flex-1">
+  <section class="flex flex-col items-center justify-center flex-1 overflow-hidden">
     <ul class="flex flex-row items-center w-screen h-screen overflow-x-auto snap-x snap-mandatory no-scrollbar">
       <li class="mr-24 snap-center">
         <div class="w-[30vw] h-[450px]"></div>
