@@ -40,26 +40,26 @@
   </script>
 </head>
 <body class="flex justify-center flex-1 h-screen p-0 m-0" style="background-color: #DFDFDF;">
-  <header class="fixed top-0 h-[100px] flex items-center flex-row px-12 justify-between w-screen z-10">
+  <header class="fixed top-0 h-[60px] md:h-[100px] flex items-center flex-row px-6 md:px-12 justify-between w-screen z-10">
     <h1><a href="/"><img src="../assets/logo-matmac.svg" width="100" height="25" alt="Matmac - Design Manager"></a></h1>
-    <nav role="navigation">
-      <a class="text-[#39474E] text-base no-underline font-regular hover:border-b hover:border-[#1446E7] hover:text-[#1446E7]" href="../projects" style="font-family: Inter, sans-serif;">Projects</a>
-      <a class="text-base no-underline font-regular mx-6 border-b border-[#1446E7] text-[#1446E7]" href="./about" style="font-family: Inter, sans-serif;">About</a>
+    <nav role="navigation" class="invisible md:visible">
+      <a class="text-[#39474E] text-base no-underline font-regular hover:border-b hover:border-[#1446E7] hover:text-[#1446E7]" href="../projects/" style="font-family: Inter, sans-serif;">Projects</a>
+      <a class="text-base no-underline font-regular border-b border-[#1446E7] mx-6 text-[#1446E7]" href="../about/" style="font-family: Inter, sans-serif;">About</a>
       <a class="text-[#39474E] text-base no-underline font-regular hover:border-b hover:border-[#1446E7] hover:text-[#1446E7]" href="mailto:hello@matmac.design" style="font-family: Inter, sans-serif;">Contact</a>
     </nav>
   </header>
-  <section class="flex flex-col items-center justify-center flex-1 h-screen overflow-hidden">
-    <div class="fixed w-[65vw] flex flex-col z-10">
-      <p class="text-[55px] leading-tight text-[#39474E] mb-10 font-semibold" style="font-family: Inter, sans-serif;">Hello! I'm Matias, a <span class="opacity-75 border-b border-[#39474E]">Design Lead & Designgineer</span> from Argentina currently living in <span class="opacity-75 border-b border-[#39474E]">Madrid</span>.</p>
-      <p class="text-[55px] leading-tight text-[#39474E] ml-16 font-semibold" style="font-family: Inter, sans-serif;">With 20+ years of experience I specialize in <span class="opacity-75 border-b border-[#39474E]">interface design</span>, <span class="opacity-75 border-b border-[#39474E]">UX/UI</span>, <span class="opacity-75 border-b border-[#39474E]">holistic design systems</span> & <span class="opacity-75 border-b border-[#39474E]">front-end/back-end development</span>.</p>
+  <section class="flex flex-col items-center justify-center flex-1 w-screen h-screen overflow-hidden">
+    <div class="fixed w-[85vw] md:w-[65vw] flex flex-col z-10 mt-[-60px]">
+      <p class="text-[25px] md:text-[55px] leading-tight text-[#39474E] mb-10 font-semibold" style="font-family: Inter, sans-serif;">Hello! I'm Matias Bejas, a <span class="border-b border-[#1446E7] text-[#1446E7]">Designgineer</span> from Argentina currently living in <span class="border-b border-[#1446E7] text-[#1446E7]">Madrid</span> working as <span class="border-b border-[#1446E7] text-[#1446E7]">Design Lead</span>.</p>
+      <p class="text-[25px] md:text-[55px] leading-tight text-[#39474E] ml-16 font-semibold" style="font-family: Inter, sans-serif;">With 20+ years of experience I specialize in <span class="border-b border-[#1446E7] text-[#1446E7]">interface design</span>, <span class="border-b border-[#1446E7] text-[#1446E7]">UX/UI</span>, <span class="border-b border-[#1446E7] text-[#1446E7]">holistic design systems</span> & <span class="border-b border-[#1446E7] text-[#1446E7]">front-end/back-end development</span>.</p>
     </div>
-    <img class="absolute w-screen opacity-50 saturate-50 contrast-125" src="../assets/matmac-2022.jpg" alt="Matmac"/>
+    <img class="absolute object-cover w-screen h-screen opacity-30 md:opacity-50 saturate-50 contrast-125" src="../assets/matmac-2022.jpg" alt="Matmac"/>
   </section>
-  <footer class="fixed bottom-0 w-screen mb-8 px-12 text-[#39474e] text-base flex flex-row justify-between" style="font-family: Inter, sans-serif;">
+  <footer class="fixed bottom-0 w-screen mb-8 px-6 md:px-12 text-[#39474e] text-xs md:text-base font-regular flex flex-row justify-between" style="font-family: Inter, sans-serif;">
     <div>
-      <a class="text-[#39474E] font-regular hover:border-b hover:border-[#1446E7] hover:text-[#1446E7]" href="https://www.linkedin.com/in/matiasbejas/" rel="noopener noreferrer" target="_blank" style="font-family: Inter, sans-serif;">Linkedin</a>
-      <a class="text-[#39474E] font-regular mx-6 hover:border-b hover:border-[#ea4c89] hover:text-[#ea4c89]" href="https://dribbble.com/matmac" rel="noopener noreferrer"target="_blank" style="font-family: Inter, sans-serif;">Dribbble</a>
-      <a class="text-[#39474E] font-regular hover:border-b hover:border-[#bc2a8d] hover:text-[#bc2a8d]" href="https://www.instagram.com/thematmac/" rel="noopener noreferrer" target="_blank" style="font-family: Inter, sans-serif;">Instagram</a>
+      <a class="text-[#39474E] hover:border-b hover:border-[#1446E7] hover:text-[#1446E7]" href="https://www.linkedin.com/in/matiasbejas/" rel="noopener noreferrer" target="_blank" style="font-family: Inter, sans-serif;">Linkedin</a>
+      <a class="text-[#39474E] mx-6 hover:border-b hover:border-[#ea4c89] hover:text-[#ea4c89]" href="https://dribbble.com/matmac" rel="noopener noreferrer"target="_blank" style="font-family: Inter, sans-serif;">Dribbble</a>
+      <a class="text-[#39474E] hover:border-b hover:border-[#bc2a8d] hover:text-[#bc2a8d]" href="https://www.instagram.com/thematmac/" rel="noopener noreferrer" target="_blank" style="font-family: Inter, sans-serif;">Instagram</a>
     </div>
     <div>
       &copy; Copyright
