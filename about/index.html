@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="../favicon.png" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Matias Bejas - Design Lead - UX/UI Expert</title>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          keyframes: {
+            'curtain-top': {
+              '0%': { transform: 'scaleY(1)' },
+              '100%': { transform: 'scaleY(0)' },
+            },
+            'slide-x': {
+              '0%': { transform: 'scaleX(0)', marginLeft: 0, opacity: 1 },
+              '50%': { transform: 'scaleX(1)', marginLeft: 0, opacity: 1 },
+              '100%': { transform: 'scaleY(0)', marginLeft: '100px', opacity: 1 },
+            },
+            'spin-reverse': {
+              'from': { transform: 'rotate(0deg)' },
+              'to': { transform: 'rotate(360deg)' },
+            },
+          },
+          animation: {
+            'curtain-top': 'curtain-top 0.6s cubic-bezier(.70,0,.35,1) 3s forwards',
+            'slide-x': 'slide-x 1s cubic-bezier(.70,0,.35,1) infinite',
+            'spin-reverse': 'spin-reverse 10s linear infinite reverse'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="flex justify-center flex-1 h-screen p-0 m-0" style="background-color: #DFDFDF;">
+  <header class="fixed h-[100px] flex items-center flex-row px-12 justify-between w-screen z-10">
+    <h1><a href="/"><img src="../assets/logo-matmac.svg" width="100" height="25" alt="Matmac - Design Manager"></a></h1>
+    <div>
+      <a class="text-[#39474E] text-base no-underline font-regular hover:border-b hover:border-[#1446E7] hover:text-[#1446E7]" href="./projects" style="font-family: Inter, sans-serif;">Projects</a>
+      <a class="text-base no-underline font-regular mx-6 border-b border-[#1446E7] text-[#1446E7]" href="./about" style="font-family: Inter, sans-serif;">About</a>
+      <a class="text-[#39474E] text-base no-underline font-regular hover:border-b hover:border-[#1446E7] hover:text-[#1446E7]" href="mailto:hello@matmac.design" style="font-family: Inter, sans-serif;">Contact</a>
+    </div>
+  </header>
+  <section class="flex flex-col items-center justify-center flex-1">
+    <div class="fixed w-[70vw] flex flex-col z-10 pl-40">
+      <p class="text-[65px] leading-tight text-[#39474E] mb-10 font-semibold" style="font-family: Inter, sans-serif;">Hello! I'm Matias, a <span class="opacity-50 border-b border-[#39474E]">designgineer</span> from Argentina currently living in <span class="opacity-50 border-b border-[#39474E]">Madrid</span>.</p>
+      <p class="text-[65px] leading-tight text-[#39474E] ml-32 font-semibold" style="font-family: Inter, sans-serif;">With 20+ years of experience I specialize in <span class="opacity-50 border-b border-[#39474E]">interface design</span>, <span class="opacity-50 border-b border-[#39474E]">UX/UI</span>, <span class="opacity-50 border-b border-[#39474E]">holistic design systems</span> & <span class="opacity-50 border-b border-[#39474E]">front-end/back-end development</span>.</p>
+    </div>
+    <img class="absolute left-0 z-0 w-[20vw] inset-y-auto ml-40 shadow-2xl rounded-lg" src="../assets/matmac-2022.jpg" alt="Matmac"/>
+  </section>
+  <footer class="fixed bottom-0 w-screen mb-8 px-12 text-[#39474e] text-base flex flex-row justify-between" style="font-family: Inter, sans-serif;">
+    <div>
+      <a class="text-[#39474E] font-regular hover:border-b hover:border-[#1446E7] hover:text-[#1446E7]" href="https://www.linkedin.com/in/matiasbejas/" rel="noopener noreferrer" target="_blank" style="font-family: Inter, sans-serif;">Linkedin</a>
+      <a class="text-[#39474E] font-regular mx-6 hover:border-b hover:border-[#ea4c89] hover:text-[#ea4c89]" href="https://dribbble.com/matmac" rel="noopener noreferrer"target="_blank" style="font-family: Inter, sans-serif;">Dribbble</a>
+      <a class="text-[#39474E] font-regular hover:border-b hover:border-[#bc2a8d] hover:text-[#bc2a8d]" href="https://www.instagram.com/thematmac/" rel="noopener noreferrer" target="_blank" style="font-family: Inter, sans-serif;">Instagram</a>
+    </div>
+    <div>
+      &copy; Copyright
+      <span id="copyright">
+        <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script>
+      </span>
+    </div>
+  </footer>
+</body>
+</html>
