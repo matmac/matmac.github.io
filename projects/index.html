@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400;600&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
+  <script type="text/javascript" src="../plugins/vanilla-tilt.min.js"></script>
   <title>Matias Bejas - Projects</title>
   <style>
     .no-scrollbar::-webkit-scrollbar {
@@ -23,11 +24,24 @@
 </head>
 <body class="flex justify-center flex-1 p-0 m-0 overflow-hidden md:h-screen" style="background-color: #DFDFDF;">
   <header class="fixed top-0 h-[60px] md:h-[100px] flex items-center flex-row px-6 md:px-12 justify-between w-screen z-10">
-    <h1><a href="/"><img src="../assets/logo-matmac.svg" width="100" height="25" alt="Matmac - Design Manager"></a></h1>
-    <nav role="navigation" class="invisible md:visible">
+    <h1 class="z-[45]"><a href="/"><img src="../assets/logo-matmac.svg" width="100" height="25" alt="Matmac - Design Manager"></a></h1>
+    <nav role="navigation" class="hidden md:flex">
       <a class="text-base no-underline font-regular border-b border-[#1446E7] text-[#1446E7]" href="../projects/" style="font-family: Inter, sans-serif;">Projects</a>
       <a class="text-[#39474E] text-base no-underline font-regular mx-6 hover:border-b hover:border-[#1446E7] hover:text-[#1446E7]" href="../about/" style="font-family: Inter, sans-serif;">About</a>
       <a class="text-[#39474E] text-base no-underline font-regular hover:border-b hover:border-[#1446E7] hover:text-[#1446E7]" href="mailto:hello@matmac.design" style="font-family: Inter, sans-serif;">Contact</a>
+    </nav>
+    <nav class="md:hidden" role="navigation">
+      <div class="flex flex-col items-center justify-center w-[40px] h-[32px]">
+        <input class="w-[40px] h-[32px] absolute cursor-pointer z-[42] opacity-0 peer" type="checkbox" />
+        <span class="w-[32px] h-0.5 relative z-[1] bg-slate-400 flex origin-top-left peer-checked:animate-rotate-hamburguer"></span>
+        <span class="w-[32px] h-0.5 relative z-[1] my-1.5 bg-slate-400 flex peer-checked:animate-rotate-hamburguer-inverse"></span>
+        <span class="w-[32px] h-0.5 relative z-[1] bg-slate-400 flex origin-[0%_100%] origin-top transform-all peer-checked:opacity-0"></span>
+        <div class="fixed inset-0 bg-[#dfdfdf] shadow-xl top-0 flex flex-col translate-x-[-120%] duration-500 items-center justify-center transition-all peer-checked:translate-x-0">
+          <a class="text-base no-underline font-regular text-2xl border-b border-[#1446E7] text-[#1446E7]" href="./projects" style="font-family: Inter, sans-serif;">Projects</a>
+          <a class="text-[#39474E] text-base no-underline font-regular text-2xl my-12 hover:border-b hover:border-[#1446E7] hover:text-[#1446E7]" href="./about" style="font-family: Inter, sans-serif;">About</a>
+          <a class="text-[#39474E] text-base no-underline font-regular text-2xl hover:border-b hover:border-[#1446E7] hover:text-[#1446E7]" href="mailto:hello@matmac.design" style="font-family: Inter, sans-serif;">Contact</a>
+        </div>
+      </div>
     </nav>
   </header>
   <section class="flex flex-col items-center justify-center flex-1 overflow-hidden">
@@ -37,57 +51,58 @@
       </li>
       <li class="ml-2 mr-4 md:mr-12 snap-center md:ml-0">
         <div class="w-[80vw] md:w-[30vw] h-[320px] md:h-[450px] flex">
-          <div class="bg-white flex flex-1 mx-4 md:mx-12 rounded-lg overflow-hidden md:drop-shadow-2xl hover:drop-shadow-[0_30px_30px_rgba(0,0,0,0.15)]">
-            <a class="flex" href="./helzi/"><img class="object-cover object-left-top transition-all duration-[1000ms] hover:scale-105" src="../assets/projects-slides/helzi.jpg" alt="Helzi project"></a>
+          <div class="bg-white flex flex-1 mx-4 md:mx-12 rounded-lg overflow-hidden md:drop-shadow-2xl hover:drop-shadow-[0_30px_30px_rgba(0,0,0,0.15)]" data-tilt>
+            <a class="flex hidden md:flex" href="./helzi/"><img class="object-cover object-left-top" src="../assets/projects-slides/helzi.jpg" alt="Helzi project"></a>
+            <a class="flex md:hidden" href="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2Fq0kan3jZ1fNHzxcd69WeBT%2FMatmac---Helzi%3Fnode-id%3D0%253A1" target="_blank"><img class="object-cover object-left-top" src="../assets/projects-slides/helzi.jpg" alt="Helzi project"></a>
           </div>
         </div>
       </li>
       <li class="mr-4 md:mr-12 snap-center">
         <div class="w-[80vw] md:w-[30vw] h-[320px] md:h-[450px] flex">
           <div class="bg-white flex flex-1 mx-4 md:mx-12 rounded-lg overflow-hidden md:drop-shadow-2xl hover:drop-shadow-[0_30px_30px_rgba(0,0,0,0.15)]">
-            <a class="flex" href="./amazon/"><img class="object-cover object-left-top transition-all duration-[1000ms] hover:scale-105" src="../assets/projects-slides/amazon.jpg" alt="Amazon project"></a>
+            <a class="flex" href="./amazon/"><img class="object-cover object-left-top" src="../assets/projects-slides/amazon.jpg" alt="Amazon project"></a>
           </div>
         </div>
       </li>
       <li class="mr-4 md:mr-12 snap-center">
         <div class="w-[80vw] md:w-[30vw] h-[320px] md:h-[450px] flex">
           <div class="bg-white flex flex-1 mx-4 md:mx-12 rounded-lg overflow-hidden md:drop-shadow-2xl hover:drop-shadow-[0_30px_30px_rgba(0,0,0,0.15)]">
-            <a class="flex" href="./linkedin/"><img class="object-cover object-left-top transition-all duration-[1000ms] hover:scale-105" src="../assets/projects-slides/linkedin.jpg" alt="Linkedin project"></a>
+            <a class="flex" href="./linkedin/"><img class="object-cover object-left-top" src="../assets/projects-slides/linkedin.jpg" alt="Linkedin project"></a>
           </div>
         </div>
       </li>
       <li class="mr-4 md:mr-12 snap-center">
         <div class="w-[80vw] md:w-[30vw] h-[320px] md:h-[450px] flex">
           <div class="bg-white flex flex-1 mx-4 md:mx-12 rounded-lg overflow-hidden md:drop-shadow-2xl hover:drop-shadow-[0_30px_30px_rgba(0,0,0,0.15)]">
-            <a class="flex" href="./sony/"><img class="object-cover object-left-top transition-all duration-[1000ms] hover:scale-105" src="../assets/projects-slides/sony.jpg" alt="Sony project"></a>
+            <a class="flex" href="./sony/"><img class="object-cover object-left-top" src="../assets/projects-slides/sony.jpg" alt="Sony project"></a>
           </div>
         </div>
       </li>
       <li class="mr-4 md:mr-12 snap-center">
         <div class="w-[80vw] md:w-[30vw] h-[320px] md:h-[450px] flex">
           <div class="bg-white flex flex-1 mx-4 md:mx-12 rounded-lg overflow-hidden md:drop-shadow-2xl hover:drop-shadow-[0_30px_30px_rgba(0,0,0,0.15)]">
-            <img class="object-cover object-left-top transition-all duration-[1000ms] hover:scale-105" src="../assets/projects-slides/posters.jpg" alt="Posters project">
+            <img class="object-cover object-left-top" src="../assets/projects-slides/posters.jpg" alt="Posters project">
           </div>
         </div>
       </li>
       <li class="mr-4 md:mr-12 snap-center">
         <div class="w-[80vw] md:w-[30vw] h-[320px] md:h-[450px] flex">
           <div class="bg-white flex flex-1 mx-4 md:mx-12 rounded-lg overflow-hidden md:drop-shadow-2xl hover:drop-shadow-[0_30px_30px_rgba(0,0,0,0.15)]">
-            <img class="object-cover object-left-top transition-all duration-[1000ms] hover:scale-105" src="../assets/projects-slides/flow.jpg" alt="Flow project">
+            <img class="object-cover object-left-top" src="../assets/projects-slides/flow.jpg" alt="Flow project">
           </div>
         </div>
       </li>
       <li class="mr-4 md:mr-12 snap-center">
         <div class="w-[80vw] md:w-[30vw] h-[320px] md:h-[450px] flex">
           <div class="bg-white flex flex-1 mx-4 md:mx-12 rounded-lg overflow-hidden md:drop-shadow-2xl hover:drop-shadow-[0_30px_30px_rgba(0,0,0,0.15)]">
-            <img class="object-cover object-left-top transition-all duration-[1000ms] hover:scale-105" src="../assets/projects-slides/holafly.jpg" alt="Holafly project">
+            <img class="object-cover object-left-top" src="../assets/projects-slides/holafly.jpg" alt="Holafly project">
           </div>
         </div>
       </li>
       <li class="mr-4 md:mr-12 snap-center">
         <div class="w-[80vw] md:w-[30vw] h-[320px] md:h-[450px] flex">
           <div class="bg-white flex flex-1 mx-4 md:mx-12 rounded-lg overflow-hidden md:drop-shadow-2xl hover:drop-shadow-[0_30px_30px_rgba(0,0,0,0.15)]">
-            <img class="object-cover object-left-top transition-all duration-[1000ms] hover:scale-105" src="../assets/projects-slides/tnl.jpg" alt="Tradenolimits project">
+            <img class="object-cover object-left-top" src="../assets/projects-slides/tnl.jpg" alt="Tradenolimits project">
           </div>
         </div>
       </li>
@@ -109,5 +124,33 @@
       </span>
     </div>
   </footer>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          keyframes: {
+            'rotate-hamburguer': {
+              'from': { transform: 'rotate(0deg)' },
+              'to': { transform: 'rotate(45deg) translate(1px, -4px)' },
+            },
+            'rotate-hamburguer-inverse': {
+              'from': { transform: 'rotate(0deg) translate(0, 0)' },
+              'to': { transform: 'rotate(-45deg) translate(-2px, -1px)' },
+            }
+          },
+          animation: {
+            'rotate-hamburguer': 'rotate-hamburguer 0.2s cubic-bezier(.70,0,.35,1) forwards',
+            'rotate-hamburguer-inverse': 'rotate-hamburguer-inverse 0.2s cubic-bezier(.70,0,.35,1) forwards'
+          }
+        }
+      }
+    }
+    VanillaTilt.init(document.querySelectorAll('.rounded-lg'), {
+      scale: 1.05,
+      speed: 2000,
+      max: 25,
+      perspective: 2000,
+    });
+  </script>
 </body>
 </html>
