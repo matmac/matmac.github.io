@@ -126,7 +126,7 @@
         });
       }
     });
-    document.querySelectorAll('#desktop-nav a').forEach(function(el) {
+    document.querySelectorAll('#desktop-nav a, h1 a').forEach(function(el) {
       el.addEventListener('click', function(e) {
         e.preventDefault();
         var newLocation = this.href;

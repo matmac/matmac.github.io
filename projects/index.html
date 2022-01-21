@@ -28,16 +28,6 @@
   <meta property="twitter:title" content="Matias Bejas - Design Lead - UX/UI Expert">
   <meta property="twitter:description" content="I help industry leaders, agencies & startups from all over the world create remarkable user-driven experiences.">
   <meta property="twitter:image" content="https://matmac.design/assets/bg-social-matmac.png">
-  <style>
-    .no-scrollbar::-webkit-scrollbar {
-      display: none;
-    }
-
-    .no-scrollbar {
-      -ms-overflow-style: none;
-      scrollbar-width: none;
-    }
-  </style>
 </head>
 <body class="flex justify-center flex-1 p-0 m-0 overflow-hidden md:h-screen" style="background-color: #DFDFDF;">
   <div id="curtain" class="absolute flex flex-col items-center justify-center w-screen h-screen bg-[#1446E7] z-50 transition-all animate-curtain-up origin-top">
@@ -204,7 +194,7 @@
         });
       }
     });
-    document.querySelectorAll('#desktop-nav a').forEach(function(el) {
+    document.querySelectorAll('#desktop-nav a, h1 a').forEach(function(el) {
       el.addEventListener('click', function(e) {
         e.preventDefault();
         var newLocation = this.href;
