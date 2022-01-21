@@ -38,7 +38,7 @@
   </div>
   <header class="fixed top-0 h-[60px] md:h-[100px] flex items-center flex-row px-6 md:px-12 justify-between w-screen z-10">
     <h1 class="z-[45]"><a href="/"><img src="./assets/logo-matmac.svg" width="100" height="25" alt="Matmac - Design Manager"></a></h1>
-    <nav id="desktop-nav" role="navigation" class="hidden md:flex">
+    <nav role="navigation" class="hidden md:flex">
       <a id="projects" class="text-[#39474E] text-base no-underline font-regular hover:border-b hover:border-[#1446E7] hover:text-[#1446E7]" href="./projects" style="font-family: Inter, sans-serif;">Projects</a>
       <a class="text-[#39474E] text-base no-underline font-regular mx-6 hover:border-b hover:border-[#1446E7] hover:text-[#1446E7]" href="./about" style="font-family: Inter, sans-serif;">About</a>
       <a class="text-[#39474E] text-base no-underline font-regular hover:border-b hover:border-[#1446E7] hover:text-[#1446E7]" href="mailto:hello@matmac.design" style="font-family: Inter, sans-serif;">Contact</a>
@@ -52,7 +52,7 @@
         <div class="fixed inset-0 bg-[#dfdfdf] shadow-xl top-0 flex flex-col translate-x-[-120%] duration-500 items-center justify-center transition-all peer-checked:translate-x-0">
           <a class="text-[#39474E] text-base no-underline font-regular text-2xl hover:border-b hover:border-[#1446E7] hover:text-[#1446E7]" href="./projects" style="font-family: Inter, sans-serif;">Projects</a>
           <a class="text-[#39474E] text-base no-underline font-regular text-2xl my-12 hover:border-b hover:border-[#1446E7] hover:text-[#1446E7]" href="./about" style="font-family: Inter, sans-serif;">About</a>
-          <a class="text-[#39474E] text-base no-underline font-regular text-2xl hover:border-b hover:border-[#1446E7] hover:text-[#1446E7]" href="mailto:hello@matmac.design" style="font-family: Inter, sans-serif;">Contact</a>
+          <a id="contact" class="text-[#39474E] text-base no-underline font-regular text-2xl hover:border-b hover:border-[#1446E7] hover:text-[#1446E7]" href="mailto:hello@matmac.design" style="font-family: Inter, sans-serif;">Contact</a>
         </div>
       </div>
     </nav>
@@ -137,7 +137,7 @@
     <div>
       <a class="text-[#39474E] hover:border-b hover:border-[#1446E7] hover:text-[#1446E7]" href="https://www.linkedin.com/in/matiasbejas/" rel="noopener noreferrer" target="_blank" style="font-family: Inter, sans-serif;">Linkedin</a>
       <a class="text-[#39474E] mx-6 hover:border-b hover:border-[#ea4c89] hover:text-[#ea4c89]" href="https://dribbble.com/matmac" rel="noopener noreferrer"target="_blank" style="font-family: Inter, sans-serif;">Dribbble</a>
-      <a class="text-[#39474E] hover:border-b hover:border-[#bc2a8d] hover:text-[#bc2a8d]" href="https://www.instagram.com/thematmac/" rel="noopener noreferrer" target="_blank" style="font-family: Inter, sans-serif;">Instagram</a>
+      <a id="contact" class="text-[#39474E] hover:border-b hover:border-[#bc2a8d] hover:text-[#bc2a8d]" href="https://www.instagram.com/thematmac/" rel="noopener noreferrer" target="_blank" style="font-family: Inter, sans-serif;">Instagram</a>
     </div>
     <div>
       &copy; Copyright
@@ -201,7 +201,7 @@
         });
       }
     });
-    document.querySelectorAll('#desktop-nav a, h1 a').forEach(function(el) {
+    document.querySelectorAll('nav a:not(#contact), h1 a:not(#contact)').forEach(function(el) {
       el.addEventListener('click', function(e) {
         e.preventDefault();
         var newLocation = this.href;
