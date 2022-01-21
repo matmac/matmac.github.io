@@ -28,19 +28,9 @@
   <meta property="twitter:title" content="Matias Bejas - Design Lead - UX/UI Expert">
   <meta property="twitter:description" content="I help industry leaders, agencies & startups from all over the world create remarkable user-driven experiences.">
   <meta property="twitter:image" content="https://matmac.design/assets/bg-social-matmac.png">
-  <style>
-    .no-scrollbar::-webkit-scrollbar {
-      display: none;
-    }
-
-    .no-scrollbar {
-      -ms-overflow-style: none;
-      scrollbar-width: none;
-    }
-  </style>
 </head>
 <body class="absolute inset-0 flex justify-center md:w-screen md:h-screen md:relative md:inset-auto" style="background-color: #DFDFDF;">
-  <div class="absolute flex flex-col items-center justify-center w-screen h-screen bg-[#1446E7] z-50 transition-all animate-curtain-top origin-top">
+  <div id="curtain" class="absolute flex flex-col items-center justify-center w-screen h-screen bg-[#1446E7] z-50 transition-all animate-curtain-up origin-top">
     <img class="mx-auto top-[50vh] mt-[-60px] md:mt-0 mb-2" src="assets/matmac-light.svg" width="101" height="17" alt="Matmac Portfolio">
     <div class="w-[100px] overflow-hidden">
       <div class="h-[1px] bg-white w-[100px] transition-all animate-slide-x origin-left"></div>
@@ -48,8 +38,8 @@
   </div>
   <header class="fixed top-0 h-[60px] md:h-[100px] flex items-center flex-row px-6 md:px-12 justify-between w-screen z-10">
     <h1 class="z-[45]"><a href="/"><img src="./assets/logo-matmac.svg" width="100" height="25" alt="Matmac - Design Manager"></a></h1>
-    <nav role="navigation" class="hidden md:flex">
-      <a class="text-[#39474E] text-base no-underline font-regular hover:border-b hover:border-[#1446E7] hover:text-[#1446E7]" href="./projects" style="font-family: Inter, sans-serif;">Projects</a>
+    <nav id="desktop-nav" role="navigation" class="hidden md:flex">
+      <a id="projects" class="text-[#39474E] text-base no-underline font-regular hover:border-b hover:border-[#1446E7] hover:text-[#1446E7]" href="./projects" style="font-family: Inter, sans-serif;">Projects</a>
       <a class="text-[#39474E] text-base no-underline font-regular mx-6 hover:border-b hover:border-[#1446E7] hover:text-[#1446E7]" href="./about" style="font-family: Inter, sans-serif;">About</a>
       <a class="text-[#39474E] text-base no-underline font-regular hover:border-b hover:border-[#1446E7] hover:text-[#1446E7]" href="mailto:hello@matmac.design" style="font-family: Inter, sans-serif;">Contact</a>
     </nav>
@@ -68,7 +58,7 @@
     </nav>
   </header>
   <section class="flex flex-col items-center justify-center">
-    <div class="relative">
+    <div class="relative transform transition-all scale-[0.8] opacity-0 duration-[1000ms] delay-[3000ms] origin-center" data-replace='{ "scale-[0.8]": "scale-1", "opacity-0": "opacity-1" }'>
       <div class="absolute inset-2/4 ml-[-35px] md:ml-[-50px] mt-[-37px] md:mt-[-55px] z-[3] w-[70px] md:w-[100px] h-[35px] md:h-[50px]">
         <svg class="w-full" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://web.resource.org/cc/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
           version="1.1"
@@ -140,8 +130,8 @@
       <img class="absolute top-2 md:top-0 -right-1 md:right-0 z-[2] animate-spin-reverse w-[90px] md:w-[127px]" src="assets/available.svg" alt="Matmac - Available for freelance and contract work" />
       <img class="relative z-[1] mt-10 w-[200px] h-[200px] md:w-[300px] md:h-[300px]" src="assets/matmacintosh.png" alt="Matmac Portfolio"/>
     </div>
-    <h2 class="max-w-[85vw] md:max-w-[50vw] text-center mt-[-28px] md:mt-[-45px] leading-none tracking-tight text-[#39474E] font-semibold text-[32px] md:text-[70px] ml" style="font-family: Inter, sans-serif;">I'm Matias Bejas, Design Lead & UX/UI Expert</h2>
-    <h3 class="max-w-[85vw] md:max-w-[50vw] text-center mt-8 leading-none text-[#8A9AA3] md:text-[20px] sm:text-[20px] font-regular" style="font-family: Inter, sans-serif;">I help industry leaders & startups create remarkable user-driven experiences</h3>
+    <h2 class="max-w-[85vw] md:max-w-[50vw] text-center mt-[-28px] md:mt-[-45px] leading-5 tracking-tight text-[#39474E] font-semibold text-[32px] md:text-[70px] transform transition-all translate-y-6 opacity-0 duration-[1000ms] delay-[3000ms]" style="font-family: Inter, sans-serif;" data-replace='{ "translate-y-6": "translate-y-0", "leading-5": "leading-none", "opacity-0": "opacity-1" }'>I'm Matias Bejas, Design Lead & UX/UI Expert</h2>
+    <h3 class="max-w-[85vw] md:max-w-[50vw] text-center mt-8 leading-none text-[#8A9AA3] md:text-[20px] sm:text-[20px] font-regular transform transition-all translate-y-8 opacity-0 duration-[1000ms] delay-[3500ms]" style="font-family: Inter, sans-serif;" data-replace='{ "translate-y-8": "translate-y-0", "leading-5": "leading-none", "opacity-0": "opacity-1" }'>I help industry leaders & startups create remarkable user-driven experiences</h3>
   </section>
   <footer class="fixed bottom-0 w-screen mb-8 px-6 md:px-12 text-[#39474e] text-xs md:text-base font-regular flex flex-row justify-between" style="font-family: Inter, sans-serif;">
     <div>
@@ -160,15 +150,21 @@
     tailwind.config = {
       theme: {
         extend: {
+          transitionProperty: {
+            'line-height': 'line-height',
+          },
           keyframes: {
-            'curtain-top': {
-              '0%': { transform: 'scaleY(1)' },
-              '100%': { transform: 'scaleY(0)' },
+            'curtain-down': {
+              '0%': { transform: 'translateY(-100%)' },
+              '100%': { transform: 'translateY(0)' },
+            },
+            'curtain-up': {
+              '0%': { transform: 'translateY(0)' },
+              '100%': { transform: 'translateY(-100%)' },
             },
             'slide-x': {
-              '0%': { transform: 'scaleX(0)', marginLeft: 0, opacity: 1 },
-              '50%': { transform: 'scaleX(1)', marginLeft: 0, opacity: 1 },
-              '100%': { transform: 'scaleY(0)', marginLeft: '100px', opacity: 1 },
+              '0%': { transform: 'translateX(-100%)' },
+              '100%': { transform: 'translateX(100%)' },
             },
             'spin-reverse': {
               'from': { transform: 'rotate(0deg)' },
@@ -184,7 +180,8 @@
             }
           },
           animation: {
-            'curtain-top': 'curtain-top 0.6s cubic-bezier(.70,0,.35,1) 3s forwards',
+            'curtain-up': 'curtain-up 0.6s cubic-bezier(.70,0,.35,1) 3s forwards',
+            'curtain-down': 'curtain-down 0.6s cubic-bezier(.70,0,.35,1) forwards',
             'slide-x': 'slide-x 1s cubic-bezier(.70,0,.35,1) infinite',
             'spin-reverse': 'spin-reverse 10s linear infinite reverse',
             'rotate-hamburguer': 'rotate-hamburguer 0.2s cubic-bezier(.70,0,.35,1) forwards',
@@ -193,23 +190,28 @@
         }
       }
     }
-    // Wrap every letter in a span
-    // var textWrapper = document.querySelector('.ml');
-    // textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='inline-block'>$&</span>");
 
-    // function animateText() {
-    //   anime.timeline({loop: false})
-    //     .add({
-    //       targets: '.ml .inline-block',
-    //       translateY: [100,0],
-    //       translateZ: 0,
-    //       opacity: [0,1],
-    //       easing: "easeOutExpo",
-    //       duration: 1400,
-    //       delay: (el, i) => 300 + 30 * i
-    //     })
-    // }
-    // setTimeout(animateText, 2900);
+    document.addEventListener("DOMContentLoaded", function(){
+      var replacers = document.querySelectorAll('[data-replace]');
+      for(var i=0; i<replacers.length; i++){
+        let replaceClasses = JSON.parse(replacers[i].dataset.replace.replace(/'/g, '"'));
+        Object.keys(replaceClasses).forEach(function(key) {
+          replacers[i].classList.remove(key);
+          replacers[i].classList.add(replaceClasses[key]);
+        });
+      }
+    });
+    document.querySelectorAll('#desktop-nav a').forEach(function(el) {
+      el.addEventListener('click', function(e) {
+        e.preventDefault();
+        var newLocation = this.href;
+        document.getElementById('curtain').classList.remove('animate-curtain-up');
+        document.getElementById('curtain').classList.add('animate-curtain-down');
+        setTimeout(function() {
+          window.location = newLocation;
+        }, 610)
+      });
+    });
   </script>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-FY7BN658HK"></script>

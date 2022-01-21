@@ -27,33 +27,17 @@
   <meta property="twitter:title" content="Matias Bejas - Design Lead - UX/UI Expert">
   <meta property="twitter:description" content="I help industry leaders, agencies & startups from all over the world create remarkable user-driven experiences.">
   <meta property="twitter:image" content="https://matmac.design/assets/bg-social-matmac.png">
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          keyframes: {
-            'rotate-hamburguer': {
-              'from': { transform: 'rotate(0deg)' },
-              'to': { transform: 'rotate(45deg) translate(1px, -4px)' },
-            },
-            'rotate-hamburguer-inverse': {
-              'from': { transform: 'rotate(0deg) translate(0, 0)' },
-              'to': { transform: 'rotate(-45deg) translate(-2px, -1px)' },
-            }
-          },
-          animation: {
-            'rotate-hamburguer': 'rotate-hamburguer 0.2s cubic-bezier(.70,0,.35,1) forwards',
-            'rotate-hamburguer-inverse': 'rotate-hamburguer-inverse 0.2s cubic-bezier(.70,0,.35,1) forwards'
-          }
-        }
-      }
-    }
-  </script>
 </head>
 <body class="flex justify-center flex-1 h-screen p-0 m-0" style="background-color: #DFDFDF;">
+  <div id="curtain" class="absolute flex flex-col items-center justify-center w-screen h-screen bg-[#1446E7] z-50 transition-all animate-curtain-up origin-top">
+    <img class="mx-auto top-[50vh] mt-[-60px] md:mt-0 mb-2" src="../assets/matmac-light.svg" width="101" height="17" alt="Matmac Portfolio">
+    <div class="w-[100px] overflow-hidden">
+      <div class="h-[1px] bg-white w-[100px] transition-all animate-slide-x origin-left"></div>
+    </div>
+  </div>
   <header class="fixed top-0 h-[60px] md:h-[100px] flex items-center flex-row px-6 md:px-12 justify-between w-screen z-10">
     <h1 class="z-[45]"><a href="/"><img src="../assets/logo-matmac.svg" width="100" height="25" alt="Matmac - Design Manager"></a></h1>
-    <nav role="navigation" class="hidden md:flex">
+    <nav id="desktop-nav" role="navigation" class="hidden md:flex">
       <a class="text-[#39474E] text-base no-underline font-regular hover:border-b hover:border-[#1446E7] hover:text-[#1446E7]" href="../projects/" style="font-family: Inter, sans-serif;">Projects</a>
       <a class="text-base no-underline font-regular border-b border-[#1446E7] mx-6 text-[#1446E7]" href="../about/" style="font-family: Inter, sans-serif;">About</a>
       <a class="text-[#39474E] text-base no-underline font-regular hover:border-b hover:border-[#1446E7] hover:text-[#1446E7]" href="mailto:hello@matmac.design" style="font-family: Inter, sans-serif;">Contact</a>
@@ -92,6 +76,75 @@
       </span>
     </div>
   </footer>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          transitionProperty: {
+            'line-height': 'line-height',
+          },
+          keyframes: {
+            'curtain-down': {
+              '0%': { transform: 'translateY(-100%)' },
+              '100%': { transform: 'translateY(0)' },
+            },
+            'curtain-up': {
+              '0%': { transform: 'translateY(0)' },
+              '100%': { transform: 'translateY(-100%)' },
+            },
+            'slide-x': {
+              '0%': { transform: 'translateX(-100%)' },
+              '100%': { transform: 'translateX(100%)' },
+            },
+            'rotate-hamburguer': {
+              'from': { transform: 'rotate(0deg)' },
+              'to': { transform: 'rotate(45deg) translate(1px, -4px)' },
+            },
+            'rotate-hamburguer-inverse': {
+              'from': { transform: 'rotate(0deg) translate(0, 0)' },
+              'to': { transform: 'rotate(-45deg) translate(-2px, -1px)' },
+            }
+          },
+          animation: {
+            'curtain-up': 'curtain-up 0.6s cubic-bezier(.70,0,.35,1) 3s forwards',
+            'curtain-down': 'curtain-down 0.6s cubic-bezier(.70,0,.35,1) forwards',
+            'slide-x': 'slide-x 1s cubic-bezier(.70,0,.35,1) infinite',
+            'rotate-hamburguer': 'rotate-hamburguer 0.2s cubic-bezier(.70,0,.35,1) forwards',
+            'rotate-hamburguer-inverse': 'rotate-hamburguer-inverse 0.2s cubic-bezier(.70,0,.35,1) forwards'
+          }
+        }
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", function(){
+      var replacers = document.querySelectorAll('[data-replace]');
+      for(var i=0; i<replacers.length; i++){
+        let replaceClasses = JSON.parse(replacers[i].dataset.replace.replace(/'/g, '"'));
+        Object.keys(replaceClasses).forEach(function(key) {
+          replacers[i].classList.remove(key);
+          replacers[i].classList.add(replaceClasses[key]);
+        });
+      }
+    });
+    document.querySelectorAll('#desktop-nav a').forEach(function(el) {
+      el.addEventListener('click', function(e) {
+        e.preventDefault();
+        var newLocation = this.href;
+        document.getElementById('curtain').classList.remove('animate-curtain-up');
+        document.getElementById('curtain').classList.add('animate-curtain-down');
+        setTimeout(function() {
+          window.location = newLocation;
+        }, 610)
+      });
+    });
+
+    VanillaTilt.init(document.querySelectorAll('.rounded-lg'), {
+      scale: 1.05,
+      speed: 3000,
+      max: 25,
+      perspective: 4000,
+    });
+  </script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-FY7BN658HK"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
